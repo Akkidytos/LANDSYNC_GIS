@@ -99,7 +99,7 @@ export default function ParcelDetails() {
           <div style={{ fontSize: 12, color: "var(--muted)" }}>{p.village}, {p.district}, {p.state}</div>
         </div>
         <div style={{ display: "flex", gap: 8, flexWrap: "wrap" }}>
-          <button className="btn secondary" onClick={() => navigate("/map")}>{t("parcel.viewOnMap")}</button>
+          <button className="btn secondary" onClick={() => navigate(`/map?parcelId=${id}`)}>{t("parcel.viewOnMap")}</button>
           <button className="btn secondary" onClick={() => download("pdf")}>{t("parcel.generatePdf")}</button>
           <button className="btn secondary" onClick={() => download("json")}>{t("parcel.exportJson")}</button>
           <button className="btn secondary" onClick={() => download("csv")}>{t("parcel.exportCsv")}</button>
@@ -184,3 +184,4 @@ export default function ParcelDetails() {
     </div>
   );
 }
+

@@ -16,7 +16,7 @@ import {
   FileText,
   ShieldCheck,
 } from "lucide-react";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, useSearchParams } from "react-router-dom";
 import client from "../api/client";
 import "leaflet/dist/leaflet.css";
 
@@ -1619,6 +1619,8 @@ function CadastralIntelligencePanel({
 }
 export default function GisMap() {
   const navigate = useNavigate();
+  const [searchParams] = useSearchParams();
+  const requestedParcelId = searchParams.get("parcelId") || "";
 
   const [geo, setGeo] = useState<FeatureCollection>({
     type: "FeatureCollection",
@@ -2397,6 +2399,8 @@ export default function GisMap() {
     </section>
   );
 }
+
+
 
 
 
