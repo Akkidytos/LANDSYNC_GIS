@@ -1641,7 +1641,7 @@ export default function GisMap() {
       setError("");
 
       const response = await fetch(
-        "http://localhost:8000/api/parcels/geojson",
+        `${import.meta.env.VITE_API_BASE_URL || "http://localhost:8000"}/api/parcels/geojson`,
         {
           headers: {
             "Content-Type": "application/json",
@@ -2397,6 +2397,7 @@ export default function GisMap() {
     </section>
   );
 }
+
 
 
 
