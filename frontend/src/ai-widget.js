@@ -1,4 +1,4 @@
-﻿import { jsx as _jsx, jsxs as _jsxs, Fragment as _Fragment } from "react/jsx-runtime";
+import { jsx as _jsx, jsxs as _jsxs, Fragment as _Fragment } from "react/jsx-runtime";
 import { useEffect, useState } from "react";
 const API = import.meta.env.VITE_API_BASE_URL || "http://localhost:8000";
 const STAR = "\u2726";
@@ -338,4 +338,3 @@ export function AIChat() {
 export function LandSyncAI() {
     return _jsx(AIWidget, {});
 }
-

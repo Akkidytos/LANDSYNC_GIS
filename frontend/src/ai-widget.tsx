@@ -1,4 +1,4 @@
-﻿import React, { useEffect, useState } from "react";
+import React, { useEffect, useState } from "react";
 
 type Message = {
   id: string;
@@ -12,7 +12,7 @@ type Conversation = {
   updated_at?: string;
 };
 
-const API = "http://localhost:8000";
+const API = import.meta.env.VITE_API_BASE_URL || "http://localhost:8000";
 const STAR = "\u2726";
 const CLOSE = "\u00D7";
 
@@ -459,5 +459,6 @@ export function AIChat() {
 export function LandSyncAI() {
   return <AIWidget />;
 }
+
 
 
