@@ -1,0 +1,61 @@
+﻿# Environment / secrets
+.env
+.env.*
+!.env.example
+
+# Node
+node_modules/
+frontend/node_modules/
+frontend/dist/
+dist/
+
+# Python
+.venv/
+venv/
+__pycache__/
+*.py[cod]
+
+# IDE / OS
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+
+# Temporary files
+*.tmp
+*.temp
+
+# Local database / runtime data
+*.db
+*.db.*
+backend/uploads/*
+!backend/uploads/.gitkeep
+
+# Local backup/source-history files
+*.bak
+*.backup
+*.before-*
+*.current-before-*
+*.broken-state-backup
+*.SAFE-BACKUP
+src_backup_*
+src_MASTER_BACKUP_*
+ai_ui_backups/
+dashboard_backup_*
+frontend/src_backup/
+frontend/src_MASTER_BACKUP_*
+
+# Local deployment-only files
+docker-compose.yml
+
+# TypeScript build cache
+*.tsbuildinfo
+
+# All backup variants
+*.backup*
+
+# Any backup-named files
+*backup*

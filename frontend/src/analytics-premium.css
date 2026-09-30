@@ -1,0 +1,292 @@
+﻿body.landsync-analytics-theme{
+  --ls-navy:#0b2a4a;
+  --ls-blue:#1f5aa6;
+  --ls-saffron:#ff9933;
+  --ls-green:#138808;
+  --ls-muted:#64748b;
+  background:
+    radial-gradient(circle at 8% 0%,rgba(255,153,51,.10),transparent 28%),
+    radial-gradient(circle at 100% 20%,rgba(19,136,8,.08),transparent 28%),
+    linear-gradient(180deg,#f8fafc 0%,#eef3f8 100%);
+}
+
+body.landsync-analytics-theme main{
+  position:relative;
+}
+
+body.landsync-analytics-theme main::before{
+  content:"";
+  display:block;
+  height:4px;
+  width:100%;
+  border-radius:999px;
+  margin-bottom:12px;
+  background:linear-gradient(
+    90deg,
+    #ff9933 0 33.33%,
+    #ffffff 33.33% 66.66%,
+    #138808 66.66% 100%
+  );
+}
+
+body.landsync-analytics-theme article{
+  transition:
+    transform .25s ease,
+    box-shadow .25s ease,
+    border-color .25s ease;
+}
+
+body.landsync-analytics-theme article:hover{
+  transform:translateY(-5px);
+  box-shadow:0 18px 40px rgba(11,42,74,.12);
+}
+
+body.landsync-analytics-theme .ls-kpi-card{
+  position:relative;
+  overflow:hidden;
+  min-height:135px;
+  border:2px solid transparent !important;
+  border-radius:20px !important;
+  background:
+    linear-gradient(#fff,#fff) padding-box,
+    linear-gradient(
+      90deg,
+      #ff9933 0 33.33%,
+      #ffffff 33.33% 66.66%,
+      #138808 66.66% 100%
+    ) border-box;
+  box-shadow:0 10px 28px rgba(11,42,74,.07);
+}
+
+body.landsync-analytics-theme .ls-kpi-card::before{
+  content:"";
+  position:absolute;
+  inset:0;
+  background:
+    radial-gradient(circle at 92% 12%,rgba(255,153,51,.17),transparent 24%),
+    radial-gradient(circle at 10% 90%,rgba(19,136,8,.10),transparent 28%);
+  pointer-events:none;
+}
+
+body.landsync-analytics-theme .ls-kpi-number{
+  position:relative;
+  z-index:2;
+  font-size:clamp(28px,3vw,42px) !important;
+  font-weight:850 !important;
+  letter-spacing:-.045em;
+  color:#0b2a4a !important;
+}
+
+body.landsync-analytics-theme .ls-kpi-label{
+  position:relative;
+  z-index:2;
+  margin-top:8px;
+  display:inline-block;
+  font-size:12px !important;
+  font-weight:700 !important;
+  color:#64748b !important;
+}
+
+body.landsync-analytics-theme .ls-kpi-card:hover{
+  transform:translateY(-8px) scale(1.012);
+  box-shadow:
+    0 22px 42px rgba(11,42,74,.14),
+    0 0 0 1px rgba(31,90,166,.05);
+}
+
+body.landsync-analytics-theme .ls-chart-card{
+  position:relative;
+  overflow:hidden;
+  border:2px solid transparent !important;
+  border-radius:20px !important;
+  background:
+    linear-gradient(#fff,#fff) padding-box,
+    linear-gradient(
+      90deg,
+      #ff9933 0 33.33%,
+      #ffffff 33.33% 66.66%,
+      #138808 66.66% 100%
+    ) border-box;
+  box-shadow:0 12px 30px rgba(11,42,74,.08);
+}
+
+body.landsync-analytics-theme .ls-chart-card::before{
+  content:"";
+  position:absolute;
+  left:0;
+  right:0;
+  top:0;
+  height:3px;
+  background:linear-gradient(90deg,#ff9933,#fff,#138808);
+}
+
+body.landsync-analytics-theme .ls-chart-card:hover{
+  transform:translateY(-5px);
+  box-shadow:0 22px 44px rgba(11,42,74,.13);
+}
+
+body.landsync-analytics-theme .recharts-cartesian-grid-horizontal line,
+body.landsync-analytics-theme .recharts-cartesian-grid-vertical line{
+  stroke:rgba(100,116,139,.13) !important;
+  stroke-dasharray:4 6;
+}
+
+body.landsync-analytics-theme .recharts-text{
+  fill:#64748b !important;
+  font-size:11px !important;
+  font-weight:600 !important;
+}
+
+body.landsync-analytics-theme .recharts-default-tooltip{
+  background:rgba(255,255,255,.97) !important;
+  border:1px solid rgba(15,23,42,.08) !important;
+  border-radius:14px !important;
+  box-shadow:0 18px 36px rgba(11,42,74,.15) !important;
+}
+
+body.landsync-analytics-theme .recharts-tooltip-label{
+  color:#0b2a4a !important;
+  font-weight:800 !important;
+}
+
+body.landsync-analytics-theme .recharts-legend-item-text{
+  color:#243b53 !important;
+  font-weight:700 !important;
+  font-size:11px !important;
+}
+
+body.landsync-analytics-theme .recharts-line-curve{
+  stroke-width:3 !important;
+  filter:drop-shadow(0 2px 5px rgba(31,90,166,.18));
+}
+
+body.landsync-analytics-theme .recharts-line-dots circle{
+  stroke:#fff !important;
+  stroke-width:2;
+}
+
+body.landsync-analytics-theme .recharts-pie-sector path{
+  stroke:#fff !important;
+  stroke-width:2;
+  transition:opacity .2s ease,transform .2s ease;
+}
+
+body.landsync-analytics-theme .recharts-pie-sector:hover path{
+  opacity:.78;
+}
+
+body.landsync-analytics-theme .recharts-bar-rectangle path{
+  stroke:rgba(255,255,255,.75);
+  stroke-width:1;
+}
+
+body.landsync-analytics-theme .ls-period-select{
+  min-width:145px;
+  border:2px solid transparent !important;
+  border-radius:13px !important;
+  background:
+    linear-gradient(#fff,#fff) padding-box,
+    linear-gradient(
+      90deg,
+      #ff9933 0 33.33%,
+      #ffffff 33.33% 66.66%,
+      #138808 66.66% 100%
+    ) border-box !important;
+  color:#0b2a4a !important;
+  font-weight:700;
+  box-shadow:0 8px 18px rgba(11,42,74,.08);
+  transition:.2s ease;
+}
+
+body.landsync-analytics-theme .ls-period-select:hover,
+body.landsync-analytics-theme .ls-period-select:focus{
+  transform:translateY(-2px);
+  box-shadow:0 12px 24px rgba(11,42,74,.12);
+  outline:none;
+}
+
+body.landsync-analytics-theme .ls-analytics-header{
+  position:relative;
+  border-radius:20px;
+  padding:18px 20px !important;
+  border:2px solid transparent;
+  background:
+    linear-gradient(#fff,#fff) padding-box,
+    linear-gradient(
+      90deg,
+      #ff9933,
+      #ffffff 33%,
+      #ffffff 66%,
+      #138808
+    ) border-box;
+  box-shadow:0 14px 34px rgba(11,42,74,.08);
+}
+
+body.landsync-analytics-theme .ls-analytics-header h1{
+  color:#0b2a4a;
+  letter-spacing:-.03em;
+}
+
+body.landsync-analytics-theme .ls-live-analytics{
+  position:absolute;
+  top:14px;
+  right:18px;
+  padding:7px 11px;
+  border-radius:999px;
+  color:#138808;
+  background:rgba(19,136,8,.08);
+  border:1px solid rgba(19,136,8,.20);
+  font-size:10px;
+  font-weight:800;
+  letter-spacing:.1em;
+}
+
+body.landsync-analytics-theme .ls-live-analytics::before{
+  content:"";
+  display:inline-block;
+  width:7px;
+  height:7px;
+  margin-right:7px;
+  border-radius:50%;
+  background:#138808;
+  box-shadow:0 0 0 5px rgba(19,136,8,.10);
+  animation:lsPulse 1.8s infinite;
+}
+
+body.landsync-analytics-theme .ls-kpi-card::after,
+body.landsync-analytics-theme .ls-chart-card::after{
+  content:"";
+  position:absolute;
+  left:-30%;
+  bottom:0;
+  width:160%;
+  height:2px;
+  background:linear-gradient(
+    90deg,
+    transparent,
+    #ff9933,
+    #fff 45%,
+    #fff 55%,
+    #138808,
+    transparent
+  );
+  animation:lsSlide 6s linear infinite;
+}
+
+@keyframes lsSlide{
+  from{transform:translateX(-12%)}
+  to{transform:translateX(12%)}
+}
+
+@keyframes lsPulse{
+  0%,100%{transform:scale(1);opacity:1}
+  50%{transform:scale(1.15);opacity:.7}
+}
+
+@media(max-width:900px){
+  body.landsync-analytics-theme .ls-live-analytics{
+    position:static;
+    display:inline-block;
+    margin-top:10px;
+  }
+}

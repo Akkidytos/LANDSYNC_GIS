@@ -1,0 +1,10 @@
+import { jsx as _jsx, Fragment as _Fragment, jsxs as _jsxs } from "react/jsx-runtime";
+import './analytics-premium.css';
+import './analytics-premium';
+import AIWidget from "./ai-widget";
+import React from "react";
+import ReactDOM from "react-dom/client";
+import App from "./App";
+import "./i18n";
+import "./styles.css";
+ReactDOM.createRoot(document.getElementById("root")).render(_jsx(React.StrictMode, { children: _jsxs(_Fragment, { children: [_jsx(App, {}), _jsx(AIWidget, {})] }) }));

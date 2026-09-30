@@ -1,0 +1,66 @@
+{
+  "app": { "name": "लैंडसिंक", "subtitle": "एकीकृत जीआईएस-आधारित डिजिटल भूमि प्रशासन प्रणाली" },
+  "nav": {
+    "dashboard": "डैशबोर्ड", "map": "जीआईएस मानचित्र", "registry": "भूमि अभिलेख",
+    "services": "नागरिक सेवाएं", "requests": "सेवा अनुरोध", "reports": "रिपोर्ट",
+    "analytics": "विश्लेषण", "audit": "ऑडिट ट्रेल", "users": "उपयोगकर्ता प्रबंधन",
+    "settings": "सेटिंग्स", "logout": "लॉग आउट"
+  },
+  "login": {
+    "title": "लैंडसिंक में साइन इन करें", "email": "ईमेल / उपयोगकर्ता नाम", "password": "पासवर्ड",
+    "submit": "साइन इन करें", "demo": "डेमो खाते", "error": "गलत ईमेल या पासवर्ड"
+  },
+  "dashboard": {
+    "welcome": "स्वागत है", "totalParcels": "कुल भूखंड", "myRecords": "मेरे भूमि अभिलेख",
+    "pendingRequests": "लंबित अनुरोध", "verifiedRecords": "सत्यापित अभिलेख",
+    "quickActions": "त्वरित कार्रवाई", "searchParcel": "भूखंड खोजें", "addRecord": "भूमि अभिलेख जोड़ें",
+    "generateReport": "रिपोर्ट बनाएं", "createRequest": "सेवा अनुरोध बनाएं",
+    "recentRecords": "हाल के भूमि अभिलेख", "recentRequests": "हाल के सेवा अनुरोध"
+  },
+  "registry": {
+    "title": "भूमि अभिलेख", "addRecord": "+ भूमि अभिलेख जोड़ें", "editRecord": "अभिलेख संपादित करें",
+    "viewDetails": "विवरण देखें", "ulpin": "यूएलपिन", "owner": "मालिक", "village": "गांव",
+    "district": "जिला", "state": "राज्य", "area": "क्षेत्रफल", "landUse": "भूमि उपयोग",
+    "status": "स्थिति", "actions": "कार्रवाई", "save": "सहेजें", "cancel": "रद्द करें",
+    "deleteConfirm": "इस अभिलेख को हटाएं?", "success": "भूमि अभिलेख सफलतापूर्वक जोड़ा गया।",
+    "updateSuccess": "भूमि अभिलेख अपडेट किया गया।", "deleteSuccess": "भूखंड हटाया गया।"
+  },
+  "map": {
+    "search": "भूखंड, मालिक, यूएलपिन, गांव खोजें...", "fitIndia": "भारत दृश्य",
+    "layers": "परतें", "legend": "मानचित्र लीजेंड", "viewFullDetails": "पूर्ण विवरण देखें",
+    "noResults": "आपकी खोज से मेल खाता कोई भूखंड नहीं मिला।", "demoData": "डेमो / सिंथेटिक जीआईएस डेटा — आधिकारिक कैडस्ट्रल सीमा नहीं"
+  },
+  "parcel": {
+    "identity": "भूखंड पहचान", "ownership": "स्वामित्व", "location": "स्थान",
+    "land": "भूमि", "ror": "अधिकार अभिलेख", "registration": "पंजीकरण",
+    "encumbrance": "भार", "planning": "योजना", "building": "भवन",
+    "tax": "संपत्ति कर", "utilities": "उपयोगिताएं", "audit": "ऑडिट इतिहास",
+    "viewOnMap": "मानचित्र पर देखें", "generatePdf": "पीडीएफ बनाएं", "exportJson": "जेएसओएन निर्यात करें",
+    "exportCsv": "सीएसवी निर्यात करें", "editRecord": "अभिलेख संपादित करें", "deleteRecord": "अभिलेख हटाएं"
+  },
+  "services": {
+    "title": "नागरिक सेवाएं", "newRequest": "नया सेवा अनुरोध", "serviceType": "सेवा प्रकार",
+    "description": "विवरण", "submit": "अनुरोध सबमिट करें", "myRequests": "मेरे अनुरोध",
+    "requestId": "अनुरोध आईडी", "status": "स्थिति", "date": "तारीख"
+  },
+  "reports": {
+    "title": "रिपोर्ट", "myReport": "मेरी भूमि रिपोर्ट", "selectedParcel": "चयनित भूखंड रिपोर्ट",
+    "allRecords": "सभी सुलभ अभिलेख", "pdf": "पीडीएफ", "json": "जेएसओएन", "csv": "सीएसवी",
+    "history": "मेरी बनाई रिपोर्ट"
+  },
+  "analytics": {
+    "title": "विश्लेषण", "day": "दिन", "week": "सप्ताह", "month": "महीना", "year": "वर्ष", "allTime": "सभी समय",
+    "totalArea": "कुल भूमि क्षेत्र", "verifiedParcels": "सत्यापित भूखंड", "pendingRecords": "लंबित अभिलेख",
+    "encumberedParcels": "भारग्रस्त भूखंड", "activeRequests": "सक्रिय अनुरोध"
+  },
+  "audit": {
+    "title": "ऑडिट ट्रेल", "verifyChain": "ऑडिट चेन सत्यापित करें", "valid": "चेन अखंडता सत्यापित — कोई छेड़छाड़ नहीं मिली।",
+    "invalid": "चेन अखंडता जांच विफल — छेड़छाड़ का पता चला।"
+  },
+  "users": { "title": "उपयोगकर्ता प्रबंधन", "createUser": "+ उपयोगकर्ता बनाएं", "name": "नाम", "role": "भूमिका", "status": "स्थिति" },
+  "settings": { "title": "सेटिंग्स", "language": "भाषा", "profile": "प्रोफ़ाइल" },
+  "common": {
+    "loading": "लोड हो रहा है...", "retry": "पुनः प्रयास करें", "noData": "कोई डेटा उपलब्ध नहीं",
+    "search": "खोजें", "close": "बंद करें", "required": "आवश्यक"
+  }
+}

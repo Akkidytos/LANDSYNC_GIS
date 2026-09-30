@@ -1,0 +1,550 @@
+﻿/* =========================================================
+   LANDSYNC CREATE ACCOUNT
+   Scoped only to the registration feature.
+   ========================================================= */
+
+.ls-register-entry{
+  width:100%;
+  margin-top:12px;
+  min-height:62px;
+  padding:9px 11px;
+  border:1px solid #c9e3d3;
+  border-radius:15px;
+  background:linear-gradient(135deg,#f5fcf7 0%,#eef9f2 100%);
+  display:flex;
+  align-items:center;
+  gap:10px;
+  text-align:left;
+  cursor:pointer;
+  box-sizing:border-box;
+  transition:
+    transform .18s ease,
+    box-shadow .18s ease,
+    border-color .18s ease;
+}
+
+.ls-register-entry:hover{
+  transform:translateY(-1px);
+  border-color:#9dcab0;
+  box-shadow:0 10px 22px rgba(19,112,69,.11);
+}
+
+.ls-register-entry-icon{
+  width:40px;
+  height:40px;
+  border-radius:12px;
+  display:grid;
+  place-items:center;
+  flex:none;
+  color:#16834d;
+  background:linear-gradient(135deg,#e2f6e9,#d8f0e1);
+}
+
+.ls-register-entry-copy{
+  flex:1;
+  min-width:0;
+  display:flex;
+  flex-direction:column;
+  gap:3px;
+}
+
+.ls-register-entry-copy strong{
+  color:#17425b;
+  font-size:12px;
+  font-weight:900;
+}
+
+.ls-register-entry-copy small{
+  color:#768e93;
+  font-size:9px;
+  line-height:1.35;
+}
+
+.ls-register-entry-arrow{
+  width:32px;
+  height:32px;
+  border-radius:9px;
+  display:grid;
+  place-items:center;
+  color:white;
+  background:linear-gradient(135deg,#178751,#0d704b);
+  flex:none;
+}
+
+/* Overlay */
+
+.ls-register-overlay{
+  position:fixed;
+  inset:0;
+  z-index:99999;
+  padding:20px;
+  display:grid;
+  place-items:center;
+  background:rgba(7,24,40,.53);
+  backdrop-filter:blur(7px);
+  -webkit-backdrop-filter:blur(7px);
+}
+
+.ls-register-modal{
+  width:min(650px,100%);
+  max-height:92vh;
+  overflow:auto;
+  border-radius:25px;
+  border:1px solid #d5e4ea;
+  background:#fff;
+  box-shadow:
+    0 30px 90px rgba(7,27,45,.32),
+    0 7px 18px rgba(7,27,45,.10);
+  animation:lsRegisterShow .18s ease-out;
+}
+
+@keyframes lsRegisterShow{
+  from{
+    opacity:0;
+    transform:translateY(12px) scale(.985);
+  }
+  to{
+    opacity:1;
+    transform:translateY(0) scale(1);
+  }
+}
+
+.ls-register-modal-top{
+  padding:21px 23px 17px;
+  display:flex;
+  justify-content:space-between;
+  align-items:flex-start;
+  gap:15px;
+  background:linear-gradient(135deg,#f3f8fb,#edf8f1);
+  border-bottom:1px solid #e1ebef;
+}
+
+.ls-register-brand>span{
+  color:#6f8793;
+  font-size:9px;
+  font-weight:950;
+  letter-spacing:2px;
+}
+
+.ls-register-brand h2{
+  margin:5px 0 3px;
+  color:#123b56;
+  font-size:26px;
+  line-height:1;
+  letter-spacing:-.8px;
+  font-weight:950;
+}
+
+.ls-register-brand p{
+  margin:0;
+  color:#728996;
+  font-size:10px;
+}
+
+.ls-register-close{
+  width:37px;
+  height:37px;
+  display:grid;
+  place-items:center;
+  border:1px solid #d3e0e7;
+  border-radius:10px;
+  color:#587283;
+  background:white;
+  cursor:pointer;
+}
+
+.ls-register-progress{
+  display:flex;
+  gap:5px;
+  padding:12px 23px 0;
+}
+
+.ls-register-progress span{
+  height:3px;
+  flex:1;
+  border-radius:99px;
+  background:#e3ebef;
+}
+
+.ls-register-progress span.active:first-child{
+  background:#ff9933;
+}
+
+.ls-register-progress span.active:nth-child(2){
+  background:#138808;
+}
+
+.ls-register-role-screen{
+  padding:20px 23px 23px;
+}
+
+.ls-register-section-title{
+  display:flex;
+  align-items:center;
+  gap:10px;
+  margin-bottom:16px;
+}
+
+.ls-register-number{
+  width:31px;
+  height:31px;
+  border-radius:9px;
+  display:grid;
+  place-items:center;
+  color:#16638b;
+  background:#e7f2f8;
+  font-size:10px;
+  font-weight:950;
+}
+
+.ls-register-section-title strong{
+  display:block;
+  color:#21475f;
+  font-size:13px;
+  font-weight:900;
+}
+
+.ls-register-section-title small{
+  display:block;
+  margin-top:2px;
+  color:#8999a3;
+  font-size:9px;
+}
+
+.ls-register-role-grid{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:11px;
+}
+
+.ls-register-role-card{
+  position:relative;
+  min-height:178px;
+  padding:15px;
+  text-align:left;
+  border:1px solid #d5e2e9;
+  border-radius:17px;
+  background:#fff;
+  cursor:pointer;
+  transition:.18s ease;
+}
+
+.ls-register-role-card:hover{
+  transform:translateY(-2px);
+  box-shadow:0 13px 28px rgba(23,62,85,.09);
+}
+
+.ls-register-role-card.selected{
+  border:2px solid #13834d;
+  background:#f4fbf6;
+}
+
+.ls-register-role-card.admin.selected{
+  border-color:#ef8d21;
+  background:#fffaf1;
+}
+
+.ls-register-role-icon{
+  width:48px;
+  height:48px;
+  margin-bottom:15px;
+  display:grid;
+  place-items:center;
+  border-radius:14px;
+}
+
+.ls-register-role-card.admin .ls-register-role-icon{
+  background:#fff0db;
+  color:#d97814;
+}
+
+.ls-register-role-card.officer .ls-register-role-icon{
+  background:#e5f2fa;
+  color:#126b9b;
+}
+
+.ls-register-role-card.citizen .ls-register-role-icon{
+  background:#e1f5e9;
+  color:#10824c;
+}
+
+.ls-register-role-card>strong{
+  display:block;
+  color:#183d57;
+  font-size:14px;
+  font-weight:900;
+}
+
+.ls-register-role-card>small{
+  display:block;
+  margin-top:5px;
+  color:#7c8e9a;
+  font-size:9px;
+  line-height:1.45;
+}
+
+.ls-register-selected-check{
+  position:absolute;
+  top:11px;
+  right:11px;
+  color:#13834d;
+}
+
+.ls-register-continue{
+  width:100%;
+  height:49px;
+  margin-top:18px;
+  padding:0 15px;
+  border:0;
+  border-radius:13px;
+  color:white;
+  background:linear-gradient(100deg,#124f79,#0e8250);
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  font-size:11px;
+  font-weight:900;
+  cursor:pointer;
+  box-shadow:0 11px 22px rgba(18,78,96,.18);
+}
+
+.ls-register-form{
+  padding:18px 23px 23px;
+  display:grid;
+  gap:12px;
+}
+
+.ls-register-role-summary{
+  display:flex;
+  align-items:center;
+  gap:10px;
+  padding:10px 11px;
+  border-radius:13px;
+  border:1px solid #dce9e2;
+  background:#f4faf6;
+}
+
+.ls-register-role-summary.admin{
+  border-color:#f0dfc5;
+  background:#fffaf2;
+}
+
+.ls-register-role-summary.officer{
+  border-color:#d8e7ef;
+  background:#f3f8fb;
+}
+
+.ls-register-summary-icon{
+  width:36px;
+  height:36px;
+  border-radius:10px;
+  display:grid;
+  place-items:center;
+  color:#16824d;
+  background:#dff2e6;
+}
+
+.ls-register-role-summary.admin .ls-register-summary-icon{
+  color:#d77814;
+  background:#ffedcf;
+}
+
+.ls-register-role-summary.officer .ls-register-summary-icon{
+  color:#146992;
+  background:#e1eff7;
+}
+
+.ls-register-role-summary>div:nth-child(2){
+  flex:1;
+}
+
+.ls-register-role-summary small{
+  display:block;
+  color:#87958f;
+  font-size:8px;
+}
+
+.ls-register-role-summary strong{
+  display:block;
+  margin-top:2px;
+  color:#176f45;
+  font-size:11px;
+  font-weight:900;
+}
+
+.ls-register-role-summary button{
+  border:0;
+  background:transparent;
+  color:#287394;
+  font-size:9px;
+  font-weight:900;
+  cursor:pointer;
+}
+
+.ls-register-form label{
+  display:block;
+  color:#294a60;
+  font-size:10px;
+  font-weight:900;
+}
+
+.ls-register-input{
+  height:49px;
+  margin-top:6px;
+  padding:0 9px;
+  box-sizing:border-box;
+  display:flex;
+  align-items:center;
+  gap:9px;
+  border:1px solid #d2e0e7;
+  border-radius:12px;
+  background:#fff;
+  color:#5a7788;
+}
+
+.ls-register-input:focus-within{
+  border-color:#4f8faa;
+  box-shadow:0 0 0 4px rgba(55,124,156,.07);
+}
+
+.ls-register-input input{
+  flex:1;
+  min-width:0;
+  height:100%;
+  border:0;
+  outline:0;
+  background:transparent;
+  color:#183a53;
+  font-size:12px;
+}
+
+.ls-register-input input::placeholder{
+  color:#a4b1b8;
+}
+
+.ls-register-eye{
+  width:32px;
+  height:32px;
+  border:0;
+  border-radius:9px;
+  display:grid;
+  place-items:center;
+  background:#f4f8fa;
+  color:#567384;
+  cursor:pointer;
+}
+
+.ls-register-hint{
+  display:block;
+  margin-top:4px;
+  color:#8a9aa3;
+  font-size:8px;
+  font-weight:500;
+}
+
+.ls-register-error,
+.ls-register-success{
+  display:flex;
+  align-items:flex-start;
+  gap:8px;
+  padding:9px 11px;
+  border-radius:10px;
+  font-size:9px;
+  line-height:1.45;
+}
+
+.ls-register-error{
+  color:#a34545;
+  background:#fff1f1;
+  border:1px solid #f0cccc;
+}
+
+.ls-register-error>span{
+  width:17px;
+  height:17px;
+  flex:none;
+  display:grid;
+  place-items:center;
+  border-radius:50%;
+  background:#d65c5c;
+  color:white;
+  font-size:10px;
+  font-weight:900;
+}
+
+.ls-register-success{
+  align-items:center;
+  color:#26734d;
+  background:#edf9f1;
+  border:1px solid #cee8d7;
+}
+
+.ls-register-actions{
+  display:flex;
+  align-items:center;
+  gap:9px;
+  margin-top:2px;
+}
+
+.ls-register-back{
+  min-width:88px;
+  height:46px;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  gap:6px;
+  border:1px solid #d7e2e8;
+  border-radius:12px;
+  color:#597183;
+  background:#fff;
+  font-size:10px;
+  font-weight:850;
+  cursor:pointer;
+}
+
+.ls-register-submit{
+  flex:1;
+  height:46px;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  padding:0 15px;
+  border:0;
+  border-radius:12px;
+  color:#fff;
+  background:linear-gradient(100deg,#124d76,#13814f);
+  font-size:11px;
+  font-weight:900;
+  cursor:pointer;
+  box-shadow:0 10px 20px rgba(17,83,91,.15);
+}
+
+.ls-register-submit:disabled,
+.ls-register-back:disabled{
+  opacity:.6;
+  cursor:not-allowed;
+}
+
+@media(max-width:650px){
+  .ls-register-overlay{
+    padding:12px;
+  }
+
+  .ls-register-modal{
+    width:100%;
+    max-height:95vh;
+    border-radius:21px;
+  }
+
+  .ls-register-role-grid{
+    grid-template-columns:1fr;
+  }
+
+  .ls-register-role-card{
+    min-height:96px;
+  }
+
+  .ls-register-role-icon{
+    margin-bottom:8px;
+  }
+}

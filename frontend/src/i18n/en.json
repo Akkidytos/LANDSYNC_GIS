@@ -1,0 +1,66 @@
+{
+  "app": { "name": "LANDSYNC", "subtitle": "Integrated GIS-Based Digital Land Governance System" },
+  "nav": {
+    "dashboard": "Dashboard", "map": "GIS Map", "registry": "Land Registry",
+    "services": "Citizen Services", "requests": "Service Requests", "reports": "Reports",
+    "analytics": "Analytics", "audit": "Audit Trail", "users": "User Management",
+    "settings": "Settings", "logout": "Logout"
+  },
+  "login": {
+    "title": "Sign in to LandSync", "email": "Email / Username", "password": "Password",
+    "submit": "Sign In", "demo": "Demo accounts", "error": "Incorrect email or password"
+  },
+  "dashboard": {
+    "welcome": "Welcome", "totalParcels": "Total Parcels", "myRecords": "My Land Records",
+    "pendingRequests": "Pending Requests", "verifiedRecords": "Verified Records",
+    "quickActions": "Quick Actions", "searchParcel": "Search Parcel", "addRecord": "Add Land Record",
+    "generateReport": "Generate Report", "createRequest": "Create Service Request",
+    "recentRecords": "Recent Land Records", "recentRequests": "Recent Service Requests"
+  },
+  "registry": {
+    "title": "Land Registry", "addRecord": "+ Add Land Record", "editRecord": "Edit Record",
+    "viewDetails": "View Details", "ulpin": "ULPIN", "owner": "Owner", "village": "Village",
+    "district": "District", "state": "State", "area": "Area", "landUse": "Land Use",
+    "status": "Status", "actions": "Actions", "save": "Save", "cancel": "Cancel",
+    "deleteConfirm": "Delete this record?", "success": "Land record successfully added.",
+    "updateSuccess": "Land record updated.", "deleteSuccess": "Parcel deleted."
+  },
+  "map": {
+    "search": "Search parcel, owner, ULPIN, village...", "fitIndia": "Fit India",
+    "layers": "Layers", "legend": "Map Legend", "viewFullDetails": "View Full Details",
+    "noResults": "No parcel found matching your search.", "demoData": "Demo / Synthetic GIS Data — Not Official Cadastral Boundaries"
+  },
+  "parcel": {
+    "identity": "Parcel Identity", "ownership": "Ownership", "location": "Location",
+    "land": "Land", "ror": "Record of Rights", "registration": "Registration",
+    "encumbrance": "Encumbrance", "planning": "Planning", "building": "Building",
+    "tax": "Property Tax", "utilities": "Utilities", "audit": "Audit History",
+    "viewOnMap": "View on Map", "generatePdf": "Generate PDF", "exportJson": "Export JSON",
+    "exportCsv": "Export CSV", "editRecord": "Edit Record", "deleteRecord": "Delete Record"
+  },
+  "services": {
+    "title": "Citizen Services", "newRequest": "New Service Request", "serviceType": "Service Type",
+    "description": "Description", "submit": "Submit Request", "myRequests": "My Requests",
+    "requestId": "Request ID", "status": "Status", "date": "Date"
+  },
+  "reports": {
+    "title": "Reports", "myReport": "My Land Report", "selectedParcel": "Selected Parcel Report",
+    "allRecords": "All Accessible Records", "pdf": "PDF", "json": "JSON", "csv": "CSV",
+    "history": "My Generated Reports"
+  },
+  "analytics": {
+    "title": "Analytics", "day": "Day", "week": "Week", "month": "Month", "year": "Year", "allTime": "All Time",
+    "totalArea": "Total Land Area", "verifiedParcels": "Verified Parcels", "pendingRecords": "Pending Records",
+    "encumberedParcels": "Encumbered Parcels", "activeRequests": "Active Requests"
+  },
+  "audit": {
+    "title": "Audit Trail", "verifyChain": "Verify Audit Chain", "valid": "Chain integrity verified — no tampering detected.",
+    "invalid": "Chain integrity check FAILED — tampering detected."
+  },
+  "users": { "title": "User Management", "createUser": "+ Create User", "name": "Name", "role": "Role", "status": "Status" },
+  "settings": { "title": "Settings", "language": "Language", "profile": "Profile" },
+  "common": {
+    "loading": "Loading...", "retry": "Retry", "noData": "No data available",
+    "search": "Search", "close": "Close", "required": "Required"
+  }
+}
