@@ -23,6 +23,7 @@ import "leaflet/dist/leaflet.css";
 type Parcel = {
   id?: number | string;
   ulpin?: string;
+  parcel_id?: string | number;
   owner?: string;
   owner_name?: string;
   guardian_name?: string;
@@ -1699,6 +1700,27 @@ export default function GisMap() {
   useEffect(() => {
     loadMap();
   }, []);
+
+  useEffect(() => {
+    const parcelId = new URLSearchParams(window.location.search).get("parcelId");
+    if (!parcelId || !geo.features.length) return;
+
+    const match = geo.features.find((feature) => {
+      const p = feature.properties || {};
+      return (
+        String(p.id ?? "") === String(parcelId) ||
+        String(p.parcel_id ?? "") === String(parcelId) ||
+        String(p.ulpin ?? "") === String(parcelId)
+      );
+    });
+
+    if (!match) return;
+
+    const p = match.properties || {};
+    setSelectedId(String(p.id ?? p.ulpin ?? p.parcel_id ?? ""));
+    setSearch(String(p.ulpin ?? p.owner_name ?? p.owner ?? ""));
+    setFitVersion((v) => v + 1);
+  }, [geo.features]);
 
   const filtered = useMemo(() => {
     const q = search.trim().toLowerCase();
